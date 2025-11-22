@@ -14,3 +14,5 @@ Clean dark synth-style UI (inspired by hardware design)
 Simple, easy-to-understand HTML + CSS + JS
 
 Keyboard support (A–K + W/E/T/Y/U for black keys)
+
+Live Demo Link :- https://gitbubu1.github.io/simple-piano-minimalistic/
