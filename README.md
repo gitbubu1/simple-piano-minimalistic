@@ -1,4 +1,4 @@
-🎹 Mini Synth Piano
+🎹 simple-piano-minimalistic
 
 A small, aesthetic piano inspired by a modern synth UI.
 Only the black and white keys are functional and play local .mp3 sound files.
