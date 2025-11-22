@@ -16,3 +16,13 @@ Simple, easy-to-understand HTML + CSS + JS
 Keyboard support (A–K + W/E/T/Y/U for black keys)
 
 Live Demo Link :- https://gitbubu1.github.io/simple-piano-minimalistic/
+
+🎮 Controls
+
+Click keys to play sound
+
+Press keyboard keys
+
+White keys: A S D F G H J K
+
+Black keys: W E T Y U
