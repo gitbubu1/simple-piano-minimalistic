@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #2a3140 0, #05070b 60%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* main device */
+.device {
+  width: 520px;
+  border-radius: 30px;
+  padding: 26px 26px 30px;
+  background: #141923;
+  box-shadow:
+    0 26px 50px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+  color: #d3d7e5;
+  position: relative;
+}
+
+.device::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  opacity: 0.6;
+}
+
+/* top section with knobs */
+.top-panel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  width: 48%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #9ea3b3;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.knob-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.knob-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.knob {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #373c4d, #121620);
+  box-shadow:
+    inset 0 0 0 2px rgba(0, 0, 0, 0.9),
+    0 8px 10px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+.knob::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 8px;
+  border-radius: 999px;
+  background: #f2f4ff;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.knob--glow {
+  box-shadow:
+    0 0 10px rgba(209, 219, 255, 0.7),
+    inset 0 0 0 2px rgba(0, 0, 0, 0.9);
+}
+
+.knob-label {
+  font-size: 10px;
+  color: #8b91a2;
+}
+
+/* keyboard area */
+.keyboard-wrapper {
+  margin-top: 6px;
+  padding: 18px 16px 16px;
+  border-radius: 20px;
+  background: #10151f;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 14px 24px rgba(0, 0, 0, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.keyboard {
+  position: relative;
+  width: 400px;           /* fixed to match layout */
+  height: 140px;
+  margin: 0 auto;
+}
+
+/* basic key styles */
+.key {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* white keys */
+.white {
+  position: relative;
+  float: left;
+  width: 50px;
+  height: 120px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #f4f5fa, #c9cdd6);
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.15),
+    0 10px 12px rgba(0, 0, 0, 0.8);
+}
+
+.white.active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.28),
+    0 4px 7px rgba(0, 0, 0, 0.85);
+  filter: brightness(0.97);
+}
+
+/* black keys */
+.black {
+  position: absolute;
+  width: 32px;
+  height: 80px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #262a35, #040509);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 18px 16px rgba(0, 0, 0, 1);
+  transform: translateX(-50%);
+}
+
+/* pressed look */
+.black.active {
+  transform: translate(-50%, 3px);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    0 7px 9px rgba(0, 0, 0, 1);
+  filter: brightness(1.1);
+}
+
+/* positions of black keys over 8 whites */
+.black[data-key="w"] { left: 50px; }
+.black[data-key="e"] { left: 100px; }
+.black[data-key="t"] { left: 200px; }
+.black[data-key="y"] { left: 250px; }
+.black[data-key="u"] { left: 300px; }
+
+/* improve clearfix for floated whites */
+.keyboard::after {
+  content: "";
+  display: block;
+  clear: both;
+}

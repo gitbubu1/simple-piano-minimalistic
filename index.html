@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Synth Piano</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="device">
+    <div class="top-panel">
+      <div class="section">
+        <span class="section-title">MODULATION</span>
+        <div class="knob-row">
+          <div class="knob-group">
+            <div class="knob"></div>
+            <span class="knob-label">Rate</span>
+          </div>
+          <div class="knob-group">
+            <div class="knob knob--glow"></div>
+            <span class="knob-label">Depth</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <span class="section-title">TREMOLO</span>
+        <div class="knob-row">
+          <div class="knob-group">
+            <div class="knob"></div>
+            <span class="knob-label">Rate</span>
+          </div>
+          <div class="knob-group">
+            <div class="knob"></div>
+            <span class="knob-label">Depth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="keyboard-wrapper">
+      <div class="keyboard">
+        <!-- white keys (bottom) -->
+        <button class="key white" data-key="a"></button>
+        <button class="key white" data-key="s"></button>
+        <button class="key white" data-key="d"></button>
+        <button class="key white" data-key="f"></button>
+        <button class="key white" data-key="g"></button>
+        <button class="key white" data-key="h"></button>
+        <button class="key white" data-key="j"></button>
+        <button class="key white" data-key="k"></button>
+
+        <!-- black keys (top) -->
+        <button class="key black" data-key="w"></button>
+        <button class="key black" data-key="e"></button>
+        <button class="key black" data-key="t"></button>
+        <button class="key black" data-key="y"></button>
+        <button class="key black" data-key="u"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
